@@ -15,11 +15,14 @@ public class EjercicioSeis {
         System.out.println("Introduzca el monto del prestamo");
         double montoPrestamo = sc.nextDouble();
 
-        System.out.println("Introduzca el interes mensual");
+        System.out.println("Introduzca el interes mensual (porcentaje)");
         double interesMensual = sc.nextDouble();
 
-        double tarifaMensual = montoPrestamo / 12; //Obtener el costo por mes
-        double pagoMensual = tarifaMensual + ((tarifaMensual * interesMensual) / 100); //Anadir al pago mensual el porcentaje *interesMensual*
+         //Obtener el costo por mes del prestamo
+        double tarifaMensual = montoPrestamo / 12;
+        
+        //Sumar el valor a pagar por mes el porcentaje dado por el usuario
+        double pagoMensual = tarifaMensual + ((tarifaMensual * interesMensual) / 100); 
         
         
         System.out.println("El pago mensual del prestamo es: " + pagoMensual);

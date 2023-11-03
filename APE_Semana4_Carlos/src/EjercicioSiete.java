@@ -18,5 +18,16 @@ public class EjercicioSiete {
 
         System.out.println("Introduzca el valor de los kilovatios consumidos en el mes ");
         double kilovatiosMes = sc.nextDouble();
+
+        System.out.println("Introduzca la edad del usuario");
+        int edadUsuario = sc.nextInt();
+
+        double plantillaLuz = kilovatioHora * kilovatiosMes;
+        
+        if(edadUsuario > 65){
+            plantillaLuz = plantillaLuz - (plantillaLuz / 10); //Eliminar el 10% de la plantilla
+        }
+        
+        System.out.println("El costo de la plantilla de luz es de: " + plantillaLuz);
     }
 }
